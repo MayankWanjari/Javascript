@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+
+    </style>
+</head>
+<body>
+    <div name="imagediv">
+        <img height="100" width="100" border="1" name="poster" >
+    </div>
+    <div>
+        <form name="frmLogin" >
+            <h2>User Login</h2>
+            UserName <input type="text" name="email"><br><br>
+            password <input type="password" name="password"><br><br>
+            <input type="button" name="btnLogin">
+            
+        </form>
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h2>Register</h2>
+            Email <input type="text" name="email"><br><br>
+            <input type="button" name="btnRegister">
+            
+        </form>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+        // window will by default come to every javascript code
+
+        console.log(document.getElementsByName("poster"));
+        // this will give in console 0:img and
+        //  length:1 means one is there
+
+        imgArry= document.getElementsByName("poster");
+        imgArry[0].src="../public/images/KFC Images/krusher.png";
+
+        
+
+        // or store previous one and then apply eg next line
+
+        // imgdivarry=document.getElementsByName("imagediv");
+        // imgdivarry[0].style.border="15px dotted blue";
+        
+        // getElementsByName will not give name it willl give array
+        // document.getElementsByName("imagediv")[0].style.border="8px solid red"; 
+        imgdivarry=document.getElementsByName("imagediv")[0];
+
+        imgdivarry.style.border="15px dotted red";
+        imgdivarry.style.height="100px";
+        imgdivarry.style.width="100px";
+
+        // OR directly writting cssText
+
+        imgdivarry.style.cssText="border: 30px dotted black; height: 100px; width: 300px;";
+</script>
