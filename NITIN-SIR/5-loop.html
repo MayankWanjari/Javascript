@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <p name="text">Hello User</p>
+    <p name="text">Welcome User</p>
+</body>
+</html>
+
+<!--javascript part -->
+<script type="text/javascript">
+    var textArray = document.getElementsByName("text");
+    console.log(textArray);
+
+    for(index=0; index<textArray.length; index++){
+        pElement = textArray[index];
+
+        // pElement.style.color='red';
+        // pElement.style.fontWeight='bold';
+        // pElement.style.fontSize='20px';
+
+        pElement.style.cssText="color: green; font-weight: bold; font-size: 20px;"
+        
+        // use for change the text
+        pElement.textContent='PWIOI';
+    }
+
+
+    // using iterator to read the values of an array
+
+    textArray.forEach(function(p){
+        console.log(p);
+        p.textContent = 'Mayank Wanjari'
+    })
+
+
+</script>
