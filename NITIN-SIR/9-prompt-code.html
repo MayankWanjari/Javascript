@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        function createFolder(){
+            result = prompt(
+                "Enter your file type","videos|images|audio"
+            )
+            msg = document.getElementById("msg");
+            if(result==null){
+                // pressed cancle button 
+                msg.outerHTML = "<h3>You have pressed the cancle button</h3>"
+            }
+            else if(result==''){
+                //w/o entering user pressed ok button 
+                msg.outerHTML = " <h3>User has pressed ok button without entering any value</h3>"
+            }
+            else {
+                // entered the value and pressed ok button
+                msg.outerHTML = `<h2 style = 'color:green' text-align='center';>Folder created with name : ${result}</h2>`;
+                msg.outerHTML = "<h2 style = 'color:green' text-align='center';>Folder created with name : "+result+"</h2>";
+            }
+        }
+
+    </script>
+</head>
+<body onload="createFolder()">
+    <p id="msg">
+
+    </p>
+</body>
+</html>
