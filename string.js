@@ -24,3 +24,7 @@ let originalString = "Hello, World!";
 let slicedString = originalString.slice(-6, -1);
 
 console.log(slicedString); // World
+
+
+var myNumbers = [10, 20, 30, 40, 50,60];
+console.log(myNumbers.length); 
